@@ -1,3 +1,17 @@
 body {
   text-align: center;
 }
+
+.boxit {
+  border: 2px solid black;
+}
+
+.sidebar {
+  float: left;
+  border: black 2px solid;
+}
+
+.sidebar2 {
+  float: right;
+  border: black 2px solid;
+}

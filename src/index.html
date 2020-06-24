@@ -7,17 +7,71 @@
 </head>
 
 <body>
-  <div class="card">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://images.unsplash.com/photo-1534278931827-8a259344abe7?ixlib=rb-1.2.1&w=1000&q=80" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This should be a working card class!
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+  <form id="charCreate">
+    <div class="form-group">
+      <br>
+      <br>
+      <div class="sidebar">
+        <h2>Sidebar</h2>
+        <p>Character Name</p>
+        <p>Character Level, Character Class</p>
+        <p>Experience</p>
+        <p>Inventory</p>
+      </div>
+      <div class="sidebar2">
+        <h2>Sidebar</h2>
+        <p>Scene Description</p>
+        <p>Danger Level, Type</p>
+        <p>Rawr</p>
+        <p>Inventory</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+
+          <div class="boxit">
+            <label for="charName">Enter your name</label>
+            <br>
+            <input type="text" required class="charName">
+            <br>
+
+            <label for="charClass">Select your specialty</label>
+
+            <div class="radio">
+              <div class="boxit">
+                <label for="charClass">I love crayons</label>
+                <p>Marine: Strength 8, Intelligence 3, Speed 5</p>
+                <input type="radio" name="charClass" value="classMarine">
+              </div>
+            </div>
+            <br>
+
+            <div class="radio">
+              <div class="boxit">
+                <label for="charClass">I'm a pretty smart guy</label>
+                <p>Scientist: Strength 3, Intelligence 10, Speed 3</p>
+                <input type="radio" name="charClass" value="classScientist">
+              </div>
+            </div>
+            <br>
+
+            <div class="radio">
+              <div class="boxit">
+                <label for="charClass">A monster? That's gonna be a no from me mate.</label>
+                <p>Scout: Strength 4, Intelligence 5, Speed 7</p>
+                <input type="radio" name="charClass" value="classScout">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4"></div>
       </div>
     </div>
-  </div>
+  </form>
 </body>
 
 </html>
