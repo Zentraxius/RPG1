@@ -52,13 +52,40 @@ export class Character {
   }   
 }
 
-export class Terrain {
-  constructor () {
+export class Encounter {
+  constructor (sandworm, mob, treasure, princess) {
+    let sandworm = sandworm;
+    let mob = mob;
+    let treasure = treasure;
+    let princess = princess;
+    
+    if (Encounter.includes(sandworm)) {
+      this.turnScore -= 20;
+    } else if (Encounter.includes(mob)) {
+      this.turnScore -= 50;
+    } else if (Encounter.includes(treasure)) {
+      this.turnScore += 50;
+    } else if (Encounter.includes(princess)) {
+      this.turnScore += 100;
+    } else {
+      return totalScore;
+    }
     
   }
 }
 
-
+export function charNamer(name) {
+if (name === 'classMarine') {
+  let userClass2 = 'Marine';
+  return userClass2
+} else if (name === 'classScientist') {
+  let userClass2 = 'Scientist';
+  return userClass2
+} else { 
+  let userClass2 = 'Scout';
+  return userClass2
+}
+}
 
 //   let output = [];
 //   for (let i=1; i<=goal; i++) {

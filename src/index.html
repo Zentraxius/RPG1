@@ -13,11 +13,11 @@
       <br>
       <br>
       <div class="sidebar">
-        <h2>Sidebar</h2>
-        <p>Character Name</p>
-        <p>Character Level, Character Class</p>
-        <p>Experience</p>
-        <p>Inventory</p>
+        <h2>About</h2>
+        <p class="charNameSidebar">Character Name</p>
+        <p class="charLevelandClass">Character Level, Character Class</p>
+        <p class="charExperience">Experience</p>
+        <p class="charInventory">Inventory</p>
       </div>
       <div class="sidebar2">
         <h2>Sidebar</h2>
@@ -27,10 +27,10 @@
         <p>Inventory</p>
       </div>
 
-      <div class="row">
+      <div class="row" id="charCreationMenu">
         <div class="col-md-4"></div>
-        <div class="col-md-4">
 
+        <div class="col-md-4">
 
           <div class="boxit">
             <label for="charName">Enter your name</label>
@@ -47,7 +47,7 @@
             <div class="boxit">
               <label for="charClass">I love crayons</label>
               <p>Marine: Strength 8, Intelligence 3, Speed 5</p>
-              <input type="radio" name="charClass" value="classMarine">
+              <input type="radio" name="charClass" value="classMarine" required>
             </div>
           </div>
           <br>
@@ -68,8 +68,9 @@
               <input type="radio" name="charClass" value="classScout">
             </div>
           </div>
+          <br>
+          <button type="submit" id="charCreateFinish">Finish</button>
         </div>
-
 
         <div class="col-md-4"></div>
       </div>
