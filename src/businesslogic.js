@@ -2,9 +2,9 @@
 
 export class Character {
   constructor (strength, intelligence, speed) {
-  this.strength = 10;
-  this.intelligence = 5;
-  this.speed = 6;
+  this.strength = 0;
+  this.intelligence = 0;
+  this.speed = 0;
   }
   gunner() {
     //Function body goes here.

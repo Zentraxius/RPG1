@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-
+import { Character } from "./../src/businesslogic.js"
 
 $(document).ready(function () {
   // $('#submit-button').submit(function (event) {
