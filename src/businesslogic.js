@@ -5,28 +5,28 @@ export class AddCharacter {
     this.totalScore = totalScore;
     this.turnScore = turnScore;
   }
-  diceRoll() {
-    let rollValue = Math.floor(Math.random() * 10) + 1;
-    if (rollValue === 1) {
-      this.turnScore = 0;
-    } else {
-      this.turnScore += rollValue;
-    }
-    return rollValue;
-  }
-  calculateTotalScore() {
-    this.totalScore += this.turnScore;
-    this.turnScore = 0;
-    return this.totalScore;
-  }
-  checkForWinner() {
-    if (this.turnScore + this.totalScore >= 100) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-}
+//   diceRoll() {
+//     let rollValue = Math.floor(Math.random() * 10) + 1;
+//     if (rollValue === 1) {
+//       this.turnScore = 0;
+//     } else {
+//       this.turnScore += rollValue;
+//     }
+//     return rollValue;
+//   }
+//   calculateTotalScore() {
+//     this.totalScore += this.turnScore;
+//     this.turnScore = 0;
+//     return this.totalScore;
+//   }
+//   checkForWinner() {
+//     if (this.turnScore + this.totalScore >= 100) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
 
 
 export class Character {
@@ -53,12 +53,7 @@ export class Character {
 }
 
 export class Encounter {
-  constructor (sandworm, mob, treasure, princess) {
-    let sandworm = sandworm;
-    let mob = mob;
-    let treasure = treasure;
-    let princess = princess;
-    
+  constructor (sandworm, mob, treasure, princess) {    
     if (Encounter.includes(sandworm)) {
       this.turnScore -= 20;
     } else if (Encounter.includes(mob)) {
@@ -74,18 +69,7 @@ export class Encounter {
   }
 }
 
-export function charNamer(name) {
-if (name === 'classMarine') {
-  let userClass2 = 'Marine';
-  return userClass2
-} else if (name === 'classScientist') {
-  let userClass2 = 'Scientist';
-  return userClass2
-} else { 
-  let userClass2 = 'Scout';
-  return userClass2
-}
-}
+
 
 //   let output = [];
 //   for (let i=1; i<=goal; i++) {
@@ -101,3 +85,17 @@ if (name === 'classMarine') {
 //   }
 //   return output;
 // }
+
+
+export function charClassNamer(name) {
+  if (name === "classMarine") {
+    let userClass2 = "Marine";
+    return userClass2;
+  } else if (name === "classScientist") {
+    let userClass2 = "Scientist";
+    return userClass2;
+  } else {
+    let userClass2 = "Scout";
+    return userClass2;
+  }
+}

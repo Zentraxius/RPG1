@@ -2,7 +2,7 @@ import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import { charNamer } from "./businesslogic.js";
+import { charClassNamer } from "./businesslogic.js";
 
 $(document).ready(function () {
   $("#charCreate").submit(function (event) {
@@ -11,11 +11,13 @@ $(document).ready(function () {
     let userName = $(".charName").val();
     $(".charNameSidebar").text(userName);
     //////////////////////////////////////
-    let userClass = $("input:radio[name=charClass]:checked").val();
-let userClassSideBar = charNamer(userClass)
-    // let userClassSideBar = charNamer($("input:radio[name=charClass]:checked").val())
+
+    let userClass = $("input:radio[name=charClass]:checked").val(); // = classMarine =/= Marine
+    let userClassSideBar = charClassNamer(userClass);
     // let userClassSideBar = $("input:radio[name=charClass]:checked").val()
-    $(".charLevelandClass").text("1 " + userClassSideBar);
+
+    // let userClassSideBar = charNamer($("input:radio[name=charClass]:checked").val())
+    $(".charLevelandClass").text("Level 1 " + userClassSideBar);
 
     $("#charCreationMenu").hide();
     $("#prologueRow").show();
