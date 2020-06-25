@@ -5,6 +5,13 @@ export class AddCharacter {
     this.totalScore = totalScore;
     this.turnScore = turnScore;
   }
+  fight() {
+    //have each character fight a monster. Whoever has the highest cumulative score going in/setting - monster power wins.
+
+  }
+}
+
+
 //   diceRoll() {
 //     let rollValue = Math.floor(Math.random() * 10) + 1;
 //     if (rollValue === 1) {
@@ -30,26 +37,49 @@ export class AddCharacter {
 
 
 export class Character {
-  constructor (strength, intelligence, speed) {
+  constructor (strength, intelligence, speed, experience) {
     this.strength = strength;
     this.intelligence = intelligence;
     this.speed = speed;
+    this.experience = experience;
   }
   marine() {
     this.strength = 8;
     this.intelligence = 3;
     this.speed = 5;
+    this.experience = experience;
   }   
   scientist() {
     this.strength = 3;
     this.intelligence = 10;
     this.speed = 3;
+    this.experience = experience;
   }   
   scout() {
     this.strength = 4;
     this.intelligence = 5;
     this.speed = 7;
+    this.experience = experience;
   }   
+}
+
+export class Monster {
+  constructor (strength, intelligence, speed, health, experience) {
+    this.strength = strength;
+    this.intelligence = intelligence;
+    this.speed = speed;
+    this.health = health;
+    this.experience = experience;
+  }
+  demagorgon() {
+
+  }
+  sasquatch() {
+
+  }
+  gremlin() {
+
+  }
 }
 
 export class Encounter {
