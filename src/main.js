@@ -12,11 +12,11 @@ $(document).ready(function () {
     $(".charNameSidebar").text(userName);
     //////////////////////////////////////
 
-    let userClass = $("input:radio[name=charClass]:checked").val(); // = classMarine =/= Marine
-    let userClassSideBar = charClassNamer(userClass);
+    // let userClass = $("input:radio[name=charClass]:checked").val(); // = classMarine =/= Marine
+    // let userClassSideBar = charClassNamer(userClass);
     // let userClassSideBar = $("input:radio[name=charClass]:checked").val()
 
-    // let userClassSideBar = charNamer($("input:radio[name=charClass]:checked").val())
+    let userClassSideBar = charClassNamer($("input:radio[name=charClass]:checked").val());
     $(".charLevelandClass").text("Level 1 " + userClassSideBar);
 
     $("#charCreationMenu").hide();

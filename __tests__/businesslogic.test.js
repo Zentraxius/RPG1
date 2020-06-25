@@ -1,7 +1,6 @@
 import { Score, Monster } from './../src/businesslogic.js';
 import { Character } from './../src/businesslogic.js';
 import { Encounter } from './../src/businesslogic.js';
-import { charClassNamer } from './../src/businesslogic.js';
 
 
 describe('Score', () => {
@@ -39,6 +38,12 @@ describe('Character', () => {
     expect(reusableCharacter.intelligence).toEqual(10);
     expect(reusableCharacter.speed).toEqual(10);
   });
+
+  test('should determine if a Character gains points after fighting a monster.', () => {
+    const fight = Character.demogorgon
+    
+    expect
+  })
   
 });
 
