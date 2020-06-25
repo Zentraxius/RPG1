@@ -13,9 +13,9 @@ Stats - Intelligence, Strength, Speed
 
 | Spec                                               | input                                        | output                                   |
 | :------------------------------------------------- | :------------------------------------------- | :--------------------------------------- |
-| This program will allow user to choose a character | User chooses "Gunner"                        | "Gunner"                                 |
+| This program will allow user to choose a character | User chooses "Gunner"                        | "Gunner"                                 | untestable |
 | 'will allow user to choose an experience/encounter | User chooses "Desert"                        | "You are in the Desert."                 |
-| 'Will allow user to choose an opponent             | User chooses "Kraken"                        | "Fight the kraken!"                      |
+| 'Will allow user to choose an opponent             | User chooses "Kraken"                        | "Fight the kraken!"                      | passed |
 | 'Will calculate the result of an encounter         | User presses "Fight"                         | "You won! Collect 3 points"              |
 | 'Will allow player to fight again."                | User presses "Fight again"                   | "Here's your next battle"                |
 | 'Will calculate the result of multiple battles.    | "All worn out? Click here for your results." | "You are the champion with \_\_ points!" |

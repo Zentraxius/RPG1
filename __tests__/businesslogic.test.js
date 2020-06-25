@@ -1,16 +1,17 @@
-import { AddCharacter, Monster } from './../src/businesslogic.js';
+import { Score, Monster } from './../src/businesslogic.js';
 import { Character } from './../src/businesslogic.js';
 import { Encounter } from './../src/businesslogic.js';
 import { charClassNamer } from './../src/businesslogic.js';
 
-// describe('AddCharacter', () => {
-//   let reusableAddCharacter = new AddCharacter(30, 5)
 
-//   test('should determine the total score for a player after one round of play.', () => {
-//     expect(reusableAddCharacter.totalScore).toBeGreaterThan(30);
-//     expect(reusableAddCharacter.turnScore).toBeGreaterThan(30);
-//   });
-// });
+describe('Score', () => {
+  let reusableScore = new Score(30, 5)
+
+  test('should determine the total score for a player after one round of play.', () => {
+    expect(reusableScore.totalScore).toEqual(30);
+    expect(reusableScore.turnScore).toEqual(5);
+  });
+});
 
 
 
@@ -50,9 +51,16 @@ describe('Monster', () => {
     expect(monsterTest.health).toEqual(10);
     expect(monsterTest.experience).toEqual(25);
   });
+
+  
 });
 
-// charClass = classMarine
-// charClassSidebar = Marine
-// take charClass and use it to generate a name for the UI
-// charClassNamer takes charClass and converts it to charClassSidebar
+describe('Encounter', () => {
+  let encounterTest = new Encounter(500, 400, 200, 100)
+  test('Does this encounter give us a value?', () => {
+    expect(encounterTest.sandworm).toEqual(500);
+    expect(encounterTest.mob).toEqual(400);
+    expect(encounterTest.treasure).toEqual(200);
+    expect(encounterTest.princess).toEqual(100);
+  });
+});

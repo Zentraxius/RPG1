@@ -1,13 +1,30 @@
 // export function pingPong(goal) { // pingPong is the name used for importing, it brings the function effect over
 
-export class AddCharacter {
+export class Score {
   constructor (totalScore, turnScore) {
     this.totalScore = totalScore;
     this.turnScore = turnScore;
   }
   fight() {
     //have each character fight a monster. Whoever has the highest cumulative score going in/setting - monster power wins.
+    // if Character.strength > Monster.strength, character wins and vice versa
+    // if Character.speed > Monster.strength, character wins and vice versa
+    // How do we compare arrays of character properties to determine a winner?
 
+    // Winner array = []
+    // 
+
+    if (Character.strength > Monster.strength) {
+      this.turnScore += Monster.experience();
+
+    } else {
+      this.turnScore -= 5;
+    }
+  }
+
+  experience() {
+    this.totalScore += this.turnScore;
+    return this.totalScore;
   }
 }
 
@@ -72,30 +89,47 @@ export class Monster {
     this.experience = experience;
   }
   demagorgon() {
-
+    this.strength = 8
+    this.intelligence = 9
+    this.speed = 8
+    this.health = 100
+    this.experience = 250
+// Do you dare?
   }
   sasquatch() {
-
+    this.strength = 7
+    this.speed = 4
+    this.intelligence = 4
+    this.health = 40
+    this.experience = 75
   }
   gremlin() {
-
+    this.strength = 3
+    this.speed = 6
+    this.intelligence = 2
+    this.health = 5
+    this.experience = 10
   }
 }
 
 export class Encounter {
-  constructor (sandworm, mob, treasure, princess) {    
-    if (Encounter.includes(sandworm)) {
-      this.turnScore -= 20;
-    } else if (Encounter.includes(mob)) {
-      this.turnScore -= 50;
-    } else if (Encounter.includes(treasure)) {
-      this.turnScore += 50;
-    } else if (Encounter.includes(princess)) {
-      this.turnScore += 100;
-    } else {
-      return totalScore;
-    }
+  constructor (sandworm, mob, treasure, princess) {   
+    this.sandworm = sandworm;
+    this.mob = mob;
+    this.treasure = treasure;
+    this.princess = princess;
     
+    // if (sandworm) {
+    //   this.turnScore -= 20;
+    // } else if (mob) {
+    //   this.turnScore -= 50;
+    // } else if (treasure) {
+    //   this.turnScore += 50;
+    // } else if (princess) {
+    //   this.turnScore += 100;
+    // } else {
+    //   return this.turnScore;
+    // }  
   }
 }
 
